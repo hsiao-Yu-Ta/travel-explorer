@@ -1,21 +1,12 @@
-# “””
-旅遊景點探索器 — Streamlit Cloud + iPhone 版
+# Travel Explorer - Streamlit Cloud + iPhone Version
 
-功能：
+# Features: Built-in DB + Claude AI search + Folium map + Auto itinerary
 
-- 內建台灣/亞洲/歐美熱門景點資料庫
-- Claude AI 即時補充當地景點資訊
-- Folium 互動地圖標註
-- 自動規劃最佳行程動線
-- 依類型篩選景點
-- 儲存我的行程清單
-
-部署：同 cycle-tracker，上傳到 GitHub → Streamlit Cloud
-Secrets：
-ANTHROPIC_API_KEY = “你的Key”  # https://console.anthropic.com
-“””
+# Deploy: GitHub -> Streamlit Cloud | Secrets: ANTHROPIC_API_KEY
 
 import os, json, math, datetime, requests
+import pandas as pd
+import plotly.graph_objects as go
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
